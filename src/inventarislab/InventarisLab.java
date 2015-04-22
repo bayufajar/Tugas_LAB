@@ -34,17 +34,14 @@ public class InventarisLab extends JFrame
         label1.setLocation(10, 15);
         label1.setSize(label1.getPreferredSize());
 
-        
         label2 = new JLabel("panjang : ");
         label2.setLocation(10,40);
         label2.setSize(label2.getPreferredSize());
         
-        
         label3 = new JLabel("Lebar : ");
         label3.setLocation(10,70);
         label3.setSize(label3.getPreferredSize());
-        
-        
+          
       rd1 = new JRadioButton("A");
       rd1.setLocation(80,10);
       rd1.setSize(rd1.getPreferredSize());
