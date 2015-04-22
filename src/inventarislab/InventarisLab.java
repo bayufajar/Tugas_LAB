@@ -45,8 +45,7 @@ public class InventarisLab extends JFrame
       rd1 = new JRadioButton("A");
       rd1.setLocation(80,10);
       rd1.setSize(rd1.getPreferredSize());
-      
-      
+     
       rd2 = new JRadioButton("B");
       rd2.setLocation(120,10);
       rd2.setSize(rd2.getPreferredSize());
