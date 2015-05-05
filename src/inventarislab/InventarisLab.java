@@ -41,14 +41,17 @@ public class InventarisLab extends JFrame
       rd1 = new JRadioButton("A");
       rd1.setLocation(80,10);
       rd1.setSize(rd1.getPreferredSize());
+      rd1.addActionListener(this);
       
       rd2 = new JRadioButton("B");
       rd2.setLocation(120,10);
       rd2.setSize(rd2.getPreferredSize());
+      rd2.addActionListener(this);
       
       rd3 = new JRadioButton("C");
       rd3.setLocation(160,10);
       rd3.setSize(rd3.getPreferredSize());
+      rd3.addActionListener(this);
       
       txt1 = new JTextField(15);
       txt1.setLocation(80,40);
@@ -79,7 +82,18 @@ public class InventarisLab extends JFrame
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == button1) {
 
-           
+        }
+        if(rd1.isSelected()&&e.getSource()==rd1){
+        	rd2.setSelected(false);
+        	rd3.setSelected(false);
+        }
+        if(rd2.isSelected()&&e.getSource()==rd2){
+        	rd1.setSelected(false);
+        	rd3.setSelected(false);
+        } 
+        if(rd3.isSelected()&&e.getSource()==rd3){
+        	rd2.setSelected(false);
+        	rd1.setSelected(false);
         }
     }
 
