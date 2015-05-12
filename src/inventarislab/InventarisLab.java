@@ -24,8 +24,11 @@ public class InventarisLab extends JFrame implements ActionListener {
 	public RuangLab LAB;
 
 	public InventarisLab(String title) {
-		super(title);
-		setBounds(0, 0, 300, 400);
+            
+            
+            Toolkit kit = getToolkit();
+            Dimension wndSize = kit.getScreenSize();
+            setBounds(wndSize.width/4,wndSize.height/4,wndSize.width/4,wndSize.width/4);
 		setResizable(false);
 		getContentPane().setLayout(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -136,21 +139,23 @@ public class InventarisLab extends JFrame implements ActionListener {
 	}
 	
 	public boolean bisaLanjutBuatKelas(){//method untuk cek apakah textfield telah terisi
-		int belumterisi = 0;
+		int belumterisi = 1;
 		if(txt1.getText().isEmpty()){
-			txt1.setBackground(Color.pink);
+	
+                    txt1.setBackground(Color.red);
+                     
 			belumterisi++;
 		}
 		if(txt2.getText().isEmpty()){
-			txt2.setBackground(Color.pink);
+			txt2.setBackground(Color.red);
 			belumterisi++;
 		}
 		if(txt3.getText().isEmpty()){
-			txt3.setBackground(Color.pink);
+			txt3.setBackground(Color.red);
 			belumterisi++;
 		}
 		if(txt4.getText().isEmpty()){
-			txt4.setBackground(Color.pink);
+			txt4.setBackground(Color.red);
 			belumterisi++;
 		}
 		if(belumterisi==0)return true;
